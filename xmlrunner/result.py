@@ -434,7 +434,11 @@ class _XMLTestResult(_TextTestResult):
             else:
                 failure.setAttribute('type', 'skip')
                 failure.setAttribute('message', safe_unicode(test_result.err))
-
+        else:
+            success = xml_document.createElement(elem_name)
+            testcase.appendChild(success)
+            success.setAttribute('type', 'skip')
+            success.setAttribute('message', safe_unicode('Testcase passed successfully'))           
     _report_testcase = staticmethod(_report_testcase)
 
     def generate_reports(self, test_runner):
