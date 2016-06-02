@@ -435,7 +435,7 @@ class _XMLTestResult(_TextTestResult):
                 failure.setAttribute('type', 'skip')
                 failure.setAttribute('message', safe_unicode(test_result.err))
         else:
-            success = xml_document.createElement(elem_name)
+            success = xml_document.createElement('success')
             testcase.appendChild(success)
             success.setAttribute('type', 'skip')
             success.setAttribute('message', safe_unicode('Testcase passed successfully'))           
