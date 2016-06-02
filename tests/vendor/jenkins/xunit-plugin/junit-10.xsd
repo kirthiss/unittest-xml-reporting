@@ -23,7 +23,12 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-
+    <xs:element name="success">
+        <xs:complexType mixed="true">
+            <xs:attribute name="type" type="xs:string" use="optional"/>
+            <xs:attribute name="message" type="xs:string" use="optional"/>
+        </xs:complexType>
+    </xs:element>
     <xs:element name="failure">
         <xs:complexType mixed="true">
             <xs:attribute name="type" type="xs:string" use="optional"/>
