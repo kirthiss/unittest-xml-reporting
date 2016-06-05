@@ -80,6 +80,8 @@ THE SOFTWARE.
                 </xs:choice>
             </xs:sequence>
             <xs:attribute name="name" type="xs:string" use="required"/>
+            <xs:attribute name="input" type="xs:string" use="optional"/>
+            <xs:attribute name="expected output" type="xs:string" use="optional"/>
             <xs:attribute name="assertions" type="xs:string" use="optional"/>
             <xs:attribute name="time" type="xs:string" use="optional"/>
             <xs:attribute name="timestamp" type="xs:string" use="optional"/>
