@@ -437,7 +437,7 @@ class _XMLTestResult(_TextTestResult):
         else:
             success = xml_document.createElement('success')
             testcase.appendChild(success)
-            success.setAttribute('type', 'skip')
+            success.setAttribute('type', 'success')
             success.setAttribute('message', safe_unicode('Testcase passed successfully'))           
     _report_testcase = staticmethod(_report_testcase)
 
